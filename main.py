@@ -100,7 +100,7 @@ def ButtonStart():
         NowX = NowX + int(EntMvREntry.get())
         NowX = NowX - int(EntMvLEntry.get())
         NowY = NowY + int(EntMvDEntry.get())
-        NowY = NowY + int(EntMvUEntry.get())
+        NowY = NowY - int(EntMvUEntry.get())
         pyautogui.dragTo(NowX, NowY, button=mouseButton)
         
         i += 1
