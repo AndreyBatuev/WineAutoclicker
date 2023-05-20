@@ -4,8 +4,10 @@ from tkinter import *
 from tkinter import ttk
 from time import sleep
 
+import Settings
+import About
 window = Tk()
-window.geometry('375x225')
+window.geometry('375x250')
 window.title('Wine Autoclicker')
 window['bg'] = 'pink'
 window.resizable(False, False)
@@ -102,9 +104,19 @@ def ButtonStart():
         pyautogui.dragTo(NowX, NowY, button=mouseButton)
         
         i += 1
+def CreateSettingsWindow():
+    Settings.SettingsWindow()
+def CreateAboutWindow():
+    About.AboutWindow()
 
-startbtn = Button(window, text = "start", command=ButtonStart, bg='#d95763', fg='white')
-startbtn.place(x=300,y=190)
+AboutBtn = Button(window, text = "About", command=CreateAboutWindow, bg='#d95763', fg='white')
+AboutBtn.place(x=10,y=220)
+
+SetingsBtn = Button(window, text = "Settings", command=CreateSettingsWindow, bg='#d95763', fg='white')
+SetingsBtn.place(x=240,y=220)
+
+StartBtn = Button(window, text = "Start", command=ButtonStart, bg='#d95763', fg='white')
+StartBtn.place(x=300,y=220)
 
 def Refresher():
     NowX, NowY = pyautogui.position()
