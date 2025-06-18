@@ -1,5 +1,6 @@
 # WineAutoclicker
 ## About program
+![Screenshot](https://github.com/AndreyBatuev/WineAutoclicker/raw/main/readmeFiles/screenshot.png) <br>
 Just simple python multiplatform Autoclicker
 ## Build 
 Install some libs<br/>
